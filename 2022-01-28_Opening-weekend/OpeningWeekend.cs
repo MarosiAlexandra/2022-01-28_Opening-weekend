@@ -11,6 +11,13 @@ namespace _2022_01_28_Opening_weekend
     {
         static void Main(string[] args)
         {
+            List<Film> filmek = new List<Film>();
+            foreach (var sor in File.ReadAllLines("nyitohetvege.txt").Skip(1))
+            {
+                filmek.Add(new Film(sor));
+            }
+            //3,
+            Console.WriteLine($"3.feladat: Filmek száma az állományban{filmek.Count()}db");
 
             Console.ReadKey();
         }
